@@ -233,7 +233,7 @@
         <section id="book-spotlight" class="section-block">
             <h2>Featured Novel</h2>
             <div class="hero">
-                <div class="">
+                <div class="cover.jpg">
                     [ Beyond the Realms of Death Cover Image Here ]
                 </div>
                 <div class="hero-content">
@@ -316,6 +316,7 @@ Waiting in the dark for a light to guide me home.<br>
         <section id="about-author" class="section-block">
             <h2>The Author Behind the Words</h2>
             <div class="about-layout">
+            <img src="profile.jpg" alt="Charles Sherrod" class="profile-pic" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent-gold); margin-bottom: 20px;">
                 <p>
                     Charles Sherrod is an independent author specializing in dark fiction, tense psychological horror, supernatural thrillers, and evocative poetry. 
                 </p>
