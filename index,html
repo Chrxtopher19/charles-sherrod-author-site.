@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charles Sherrod | Official Author Website</title>
+    <style>
+        /* CSS Reset & Variables based on the Book Cover */
+        :root {
+            --bg-dark: #0d0d0c;
+            --bg-card: #1c1b1a;
+            --text-light: #e6e4e2;
+            --text-muted: #a6a3a0;
+            --accent-gold: #d19743;
+            --accent-glow: rgba(209, 151, 67, 0.15);
+            --border-color: #2b2927;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            font-family: 'Times New Roman', Times, serif;
+            line-height: 1.6;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: var(--bg-card);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-size: 1.4rem;
+            letter-spacing: 2px;
+            color: var(--text-light);
+            text-transform: uppercase;
+        }
+
+        nav .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin-left: 20px;
+            font-family: Arial, sans-serif;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+        }
+
+        nav .nav-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        /* Main Container Layout */
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Typography Highlights */
+        h1, h2, h3 {
+            letter-spacing: 1px;
+            font-weight: normal;
+        }
+
+        h2 {
+            color: var(--accent-gold);
+            font-size: 2rem;
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        /* Hero Spotlight Area */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 40px;
+            border-radius: 4px;
+            margin-bottom: 60px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .hero-img-placeholder {
+            background: linear-gradient(135deg, #151413 0%, #252422 100%);
+            border: 1px dashed var(--accent-gold);
+            height: 450px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            border-radius: 2px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+
+        .hero-content h3 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+
+        .hero-content .subtitle {
+            color: var(--accent-gold);
+            font-style: italic;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            color: var(--text-muted);
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+            text-align: justify;
+        }
+
+        /* Poetry & Writings Grid */
+        .section-block {
+            margin-bottom: 60px;
+        }
+
+        .poetry-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .poetry-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 30px;
+            border-radius: 4px;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .poetry-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-gold);
+        }
+
+        .poetry-card h4 {
+            color: var(--text-light);
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            font-weight: normal;
+        }
+
+        .poetry-excerpt {
+            color: var(--text-muted);
+            font-style: italic;
+            white-space: pre-line; /* Keeps line breaks intact for poems */
+            font-size: 0.95rem;
+        }
+
+        /* About Section layout */
+        .about-layout {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 40px;
+            border-radius: 4px;
+        }
+
+        .about-layout p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        /* Footer Custom Style */
+        footer {
+            background-color: var(--bg-card);
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            padding: 30px 20px;
+            color: var(--text-muted);
+            font-family: Arial, sans-serif;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            margin-top: 80px;
+        }
+
+        /* Responsive Layout fixes for mobile devices or half screens */
+        @media (max-width: 768px) {
+            .hero, .poetry-grid {
+                grid-template-columns: 1fr;
+            }
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+            nav .nav-links a {
+                margin: 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Navigation Bar -->
+    <nav>
+        <div class="logo">Charles Sherrod</div>
+        <div class="nav-links">
+            <a href="#book-spotlight">Books</a>
+            <a href="#poetry-gallery">Poetry</a>
+            <a href="#about-author">About</a>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <!-- Featured Novel Section -->
+        <section id="book-spotlight" class="section-block">
+            <h2>Featured Novel</h2>
+            <div class="hero">
+                <div class="hero-img-placeholder">
+                    [ Beyond the Realms of Death Cover Image Here ]
+                </div>
+                <div class="hero-content">
+                    <h3>Beyond the Realms of Death</h3>
+                    <p class="subtitle">A Psychological Horror & Supernatural Thriller</p>
+                    <p>
+                        [Insert a gripping, multi-sentence synopsis of your novel here. Hook the reader with your main protagonist, the central paranormal mystery, and the dark forces that drive the narrative forward.]
+                    </p>
+                    <p style="color: var(--accent-gold); font-weight: bold; letter-spacing: 1px;">AVAILABLE NOW</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Poetry & Writing Showcase -->
+        <section id="poetry-gallery" class="section-block">
+            <h2>Poetry & Selected Writings</h2>
+            <div class="poetry-grid">
+                
+                <!-- Poem 1 Card -->
+                <div class="poetry-card">
+                    <h4>Poem Title One</h4>
+                    <p class="poetry-excerpt">
+                        First line of your poem goes here
+                        Second line follows beautifully
+                        And a third dark stanza finishes
+                        The text block layout cleanly.
+                    </p>
+                </div>
+
+                <!-- Poem 2 Card -->
+                <div class="poetry-card">
+                    <h4>Poem Title Two</h4>
+                    <p class="poetry-excerpt">
+                        Whispers echoing in the deep darkness
+                        Shadows stretching across empty spaces
+                        Time fading like cold winter breath
+                        Leaving tracks of forgotten places.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- About Author Section -->
+        <section id="about-author" class="section-block">
+            <h2>The Author Behind the Words</h2>
+            <div class="about-layout">
+                <p>
+                    Charles Sherrod is an independent author specializing in dark fiction, tense psychological horror, supernatural thrillers, and evocative poetry. 
+                </p>
+                <p>
+                    With a deep appreciation for rich atmosphere, compelling mysteries, and exploring the unknown, his work probes the thin lines separating reality, memory, and the supernatural.
+                </p>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Page Footer -->
+    <footer>
+        <p>&copy; 2026 Charles Sherrod. All Rights Reserved. Built with GitHub Pages.</p>
+    </footer>
+
+</body>
+</html>
