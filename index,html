@@ -233,7 +233,7 @@
         <section id="book-spotlight" class="section-block">
             <h2>Featured Novel</h2>
             <div class="hero">
-                <div class="hero-img-placeholder">
+                <div class="">
                     [ Beyond the Realms of Death Cover Image Here ]
                 </div>
                 <div class="hero-content">
