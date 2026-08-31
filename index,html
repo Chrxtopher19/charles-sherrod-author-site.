@@ -240,12 +240,15 @@
                     <h3>Beyond the Realms of Death</h3>
                     <p class="subtitle">A Psychological Horror & Supernatural Thriller</p>
                     <p>
-                        [Insert a gripping, multi-sentence synopsis of your novel here. Hook the reader with your main protagonist, the central paranormal mystery, and the dark forces that drive the narrative forward.]
+                        [A rainy night I dreamed I’d taken my last breath, and went from there it seemed beyond the realms of death.
+
+Chris's reality fractures when he loses his beloved Sarah. Terrifying visions invade his waking mind as he develops volatile, unexplainable extrasensory abilities. While local police hunt for logical answers, a cold, dark dimension rips straight through the fabric of reality, unleashing restless spectral entities and a trail of brutal occurrences.
+
+When homicide detectives uncover a disturbing video of a botched seance, the traditional investigation collapses, forcing the lead detective to employ professional paranormal investigators. Joining forces with Chris and his friend Becky, these experts realize a malevolent force beyond the veil targets Chris. To uncover the grim truth behind Sarah’s disappearance, they must survive a chilling descent, destroy literal demons, and battle an ancient darkness in a desperate exorcism before the darkness claims Chris's soul.]
                     </p>
                     <p style="color: var(--accent-gold); font-weight: bold; letter-spacing: 1px;">AVAILABLE NOW</p>
                 </div>
             </div>
-        </section>
 
         <!-- Poetry & Writing Showcase -->
         <section id="poetry-gallery" class="section-block">
@@ -254,27 +257,59 @@
                 
                 <!-- Poem 1 Card -->
                 <div class="poetry-card">
-                    <h4>Poem Title One</h4>
+                    <h4>Whispers</h4>
                     <p class="poetry-excerpt">
-                        First line of your poem goes here
-                        Second line follows beautifully
-                        And a third dark stanza finishes
-                        The text block layout cleanly.
+The wind off of the stormy seas<br>
+Whispers pain through the trees<br>
+The rain before it hits the ground<br>
+Whispers pain without a sound<br>
+The mourning song of the birds<br>
+Whispers pain without words<br>
+Flitting wings, the butterfly<br>
+Whispers pain to the sky<br>
+A rolling wave onto the land<br> 
+Whispers pain into the sand.<br>
+
+The wind off of the peaceful seas<br>
+Whispers love through the breeze<br>
+The rain before it hits the ground<br>
+Whispers love without a sound<br>
+A morning song without words<br>
+Whispers love from the birds<br>
+As beautiful as the butterfly<br>
+Whispers love to the sky<br>
+The endless wave onto the sands<br>
+Whispers love into my hands.<br>
+
                     </p>
                 </div>
 
                 <!-- Poem 2 Card -->
                 <div class="poetry-card">
-                    <h4>Poem Title Two</h4>
-                    <p class="poetry-excerpt">
-                        Whispers echoing in the deep darkness
-                        Shadows stretching across empty spaces
-                        Time fading like cold winter breath
-                        Leaving tracks of forgotten places.
+                    <h4>The Quiet Void</h4>
+                    <p class="poetry-excerpt" style="white-space: pre-line;>
+Voices echoing in the deep darkness,<br>
+Shadows stretching across empty spaces.<br>
+Memories fading like thunder in the distance,<br>
+Erasing paths to forgotten places.<br>
+
+A chilling wind breathes through the quiet hallway,<br>
+Where dust settles on the frames of what used to be.<br>
+The clock stands frozen at the edge of yesterday,<br>
+Ticking away the visions I can no longer see.<br>
+
+I reach into the fog for a familiar hand,<br>
+But touch only the cold, unyeilding night.<br>
+The heavy silence swallows all of my questions,<br>
+As old illusions slowly drift from sight.<br>
+
+Yet in the quiet void, a spark remains unseen,<br>
+Buried beneath the weight of a heart of stone.<br>
+A lingering echo of the life I left behind,<br>
+Waiting in the dark for a light to guide me home.<br>
                     </p>
                 </div>
 
-            </div>
         </section>
 
         <!-- About Author Section -->
@@ -285,7 +320,7 @@
                     Charles Sherrod is an independent author specializing in dark fiction, tense psychological horror, supernatural thrillers, and evocative poetry. 
                 </p>
                 <p>
-                    With a deep appreciation for rich atmosphere, compelling mysteries, and exploring the unknown, his work probes the thin lines separating reality, memory, and the supernatural.
+                    With a deep appreciation for rich atmosphere, compelling mysteries, and exploring the unknown, his work probes the thin lines separating reality, dreams, and the supernatural.
                 </p>
             </div>
         </section>
