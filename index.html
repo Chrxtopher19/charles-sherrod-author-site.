@@ -217,20 +217,17 @@
 </head>
 <body>
 
-    <!-- Main Navigation Bar -->
-    <nav>
-        <div class="logo">Charles Sherrod</div>
-        <div class="nav-links">
-            <a href="#book-spotlight">Books</a>
-            <a href="#poetry-gallery">Poetry</a>
-            <a href="#about-author">About</a>
-        </div>
-    </nav>
-
+    <!-- Interactive Navigation Tabs -->
+<nav class="tab-navigation" style="display: flex; justify-content: center; gap: 20px; margin-bottom: 40px;">
+    <button onclick="switchTab('about')" class="tab-btn active" style="background: none; border: none; color: var(--accent-gold); font-size: 1.1rem; font-weight: bold; cursor: pointer; padding: 10px 20px; border-bottom: 2px solid var(--accent-gold);">ABOUT</button>
+    <button onclick="switchTab('books')" class="tab-btn" style="background: none; border: none; color: var(--text-muted); font-size: 1.1rem; font-weight: bold; cursor: pointer; padding: 10px 20px; border-bottom: 2px solid transparent;">BOOKS</button>
+    <button onclick="switchTab('poetry')" class="tab-btn" style="background: none; border: none; color: var(--text-muted); font-size: 1.1rem; font-weight: bold; cursor: pointer; padding: 10px 20px; border-bottom: 2px solid transparent;">POETRY</button>
+</nav>
+    
     <div class="container">
 
         <!-- Featured Novel Section -->
-        <section id="book-spotlight" class="section-block">
+        <section id="books" class="tab-content" style="display: none;">
             <h2>Featured Novel</h2>
             <div class="hero">
                 <img src="cover.jpg" alt="Beyond the Realms of Death" style="max-width: 100%; height: auto; border-radius: 4px; box-shadow: 0 4px 15px rgba(209, 151, 67, 0.2);">
@@ -250,7 +247,7 @@ When homicide detectives uncover a disturbing video of a botched seance, the tra
             </div>
 
         <!-- Poetry & Writing Showcase -->
-        <section id="poetry-gallery" class="section-block">
+       <section id="poetry" class="tab-content" style="display: none;">
             <h2>Poetry & Selected Writings</h2>
             <div class="poetry-grid">
                 
@@ -312,7 +309,7 @@ Waiting in the dark for a light to guide me home.<br>
         </section>
 
         <!-- About Author Section -->
-        <section id="about-author" class="section-block">
+       <section id="about" class="tab-content" style="display: block;">
             <h2>The Author Behind the Words</h2>
             <div class="about-layout">
             <img src="profile.jpg" alt="Charles Sherrod" class="profile-pic" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent-gold); margin-bottom: 20px;">
@@ -331,6 +328,32 @@ Waiting in the dark for a light to guide me home.<br>
     <footer>
         <p>&copy; 2026 Charles Sherrod. All Rights Reserved. Built with GitHub Pages.</p>
     </footer>
+                <!-- Tab Switching Logic Script -->
+<script>
+function switchTab(tabId) {
+    // Hide all sections completely
+    var sections = document.querySelectorAll('.tab-content');
+    sections.forEach(function(section) {
+        section.style.display = 'none';
+    });
+    
+    // Show only the selected section
+    document.getElementById(tabId).style.display = 'block';
+    
+    // Reset all navigation button colors
+    var buttons = document.querySelectorAll('.tab-btn');
+    buttons.forEach(function(btn) {
+        btn.style.color = 'var(--text-muted)';
+        btn.style.borderBottom = '2px solid transparent';
+    });
+    
+    // Highlight the active clicked button in gold
+    var activeBtn = window.event.target;
+    activeBtn.style.color = 'var(--accent-gold)';
+    activeBtn.style.borderBottom = '2px solid var(--accent-gold)';
+}
+</script>
+
 </body>
 </html>
  
