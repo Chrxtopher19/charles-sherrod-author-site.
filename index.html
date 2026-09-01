@@ -1,18 +1,17 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Charles Sherrod | Official Author Website</title>
     <style>
-        /* CSS Reset & Variables based on the Book Cover */
+        /* Core Dark Gothic Theme Variables */
         :root {
             --bg-dark: #0d0d0c;
             --bg-card: #1c1b1a;
             --text-light: #e6e4e2;
             --text-muted: #a6a3a0;
             --accent-gold: #d19743;
-            --accent-glow: rgba(209, 151, 67, 0.15);
             --border-color: #2b2927;
         }
 
@@ -29,7 +28,7 @@
             line-height: 1.6;
         }
 
-        /* Navigation Bar */
+        /* Fixed Navigation Header */
         nav {
             background-color: var(--bg-card);
             border-bottom: 1px solid var(--border-color);
@@ -64,17 +63,10 @@
             color: var(--accent-gold);
         }
 
-        /* Main Container Layout */
         .container {
             max-width: 1000px;
             margin: 40px auto;
             padding: 0 20px;
-        }
-
-        /* Typography Highlights */
-        h1, h2, h3 {
-            letter-spacing: 1px;
-            font-weight: normal;
         }
 
         h2 {
@@ -87,7 +79,7 @@
             text-align: center;
         }
 
-        /* Hero Spotlight Area */
+        /* Main Book Section Layout */
         .hero {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -101,31 +93,14 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
-        .hero-img-placeholder {
-            background: linear-gradient(135deg, #151413 0%, #252422 100%);
-            border: 1px dashed var(--accent-gold);
-            height: 450px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-muted);
-            border-radius: 2px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 0.9rem;
-        }
-
-        .hero-content h3 {
-            font-size: 2.2rem;
-            margin-bottom: 10px;
-            line-height: 1.2;
-        }
-
-        .hero-content .subtitle {
-            color: var(--accent-gold);
-            font-style: italic;
-            font-size: 1.1rem;
-            margin-bottom: 20px;
+        .book-cover-img {
+            width: 100%;
+            max-width: 380px;
+            height: auto;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+            display: block;
+            margin: 0 auto;
         }
 
         .hero-content p {
@@ -135,15 +110,16 @@
             text-align: justify;
         }
 
-        /* Poetry & Writings Grid */
         .section-block {
             margin-bottom: 60px;
         }
 
+        /* Clean Two-Column Grid for Poetry Layout */
         .poetry-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 30px;
+            margin-bottom: 40px;
         }
 
         .poetry-card {
@@ -151,43 +127,52 @@
             border: 1px solid var(--border-color);
             padding: 30px;
             border-radius: 4px;
-            transition: transform 0.3s ease, border-color 0.3s ease;
-        }
-
-        .poetry-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--accent-gold);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
         }
 
         .poetry-card h4 {
-            color: var(--text-light);
-            font-size: 1.3rem;
+            color: var(--accent-gold);
+            font-size: 1.4rem;
             margin-bottom: 15px;
             font-weight: normal;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 5px;
+            text-align: center;
         }
 
         .poetry-excerpt {
             color: var(--text-muted);
             font-style: italic;
-            white-space: pre-line; /* Keeps line breaks intact for poems */
+            white-space: pre-line;
             font-size: 0.95rem;
+            line-height: 1.7;
         }
 
-        /* About Section layout */
+        /* Separated Author Bio Component */
         .about-layout {
             background-color: var(--bg-card);
             border: 1px solid var(--border-color);
             padding: 40px;
             border-radius: 4px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .about-text h3 {
+            color: var(--text-light);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-align: center;
         }
 
         .about-layout p {
             color: var(--text-muted);
             font-size: 1.1rem;
             margin-bottom: 15px;
+            text-align: justify;
         }
 
-        /* Footer Custom Style */
         footer {
             background-color: var(--bg-card);
             border-top: 1px solid var(--border-color);
@@ -200,164 +185,135 @@
             margin-top: 80px;
         }
 
-        /* Responsive Layout fixes for mobile devices or half screens */
         @media (max-width: 768px) {
             .hero, .poetry-grid {
                 grid-template-columns: 1fr;
-            }
-            nav {
-                flex-direction: column;
-                gap: 10px;
-            }
-            nav .nav-links a {
-                margin: 0 10px;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- Interactive Navigation Tabs -->
-<nav class="tab-navigation" style="display: flex; justify-content: center; gap: 20px; margin-bottom: 40px;">
-    <button onclick="switchTab('about')" class="tab-btn active" style="background: none; border: none; color: var(--accent-gold); font-size: 1.1rem; font-weight: bold; cursor: pointer; padding: 10px 20px; border-bottom: 2px solid var(--accent-gold);">ABOUT</button>
-    <button onclick="switchTab('books')" class="tab-btn" style="background: none; border: none; color: var(--text-muted); font-size: 1.1rem; font-weight: bold; cursor: pointer; padding: 10px 20px; border-bottom: 2px solid transparent;">BOOKS</button>
-    <button onclick="switchTab('poetry')" class="tab-btn" style="background: none; border: none; color: var(--text-muted); font-size: 1.1rem; font-weight: bold; cursor: pointer; padding: 10px 20px; border-bottom: 2px solid transparent;">POETRY</button>
-</nav>
-    
+    <!-- Top Navigation row -->
+    <nav>
+        <div class="logo">Charles Sherrod</div>
+        <div class="nav-links">
+            <a href="#book-spotlight">Books</a>
+            <a href="#poetry-gallery">Poetry</a>
+            <a href="#about-author">About</a>
+        </div>
+    </nav>
+
     <div class="container">
 
-        <!-- Featured Novel Section -->
-        <section id="books" class="tab-content" style="display: none;">
+        <!-- 1. Books Section Layout -->
+        <section id="book-spotlight" class="section-block">
             <h2>Featured Novel</h2>
             <div class="hero">
-                <img src="cover.jpg" alt="Beyond the Realms of Death" style="max-width: 100%; height: auto; border-radius: 4px; box-shadow: 0 4px 15px rgba(209, 151, 67, 0.2);">
+                <div>
+                    <img src="cover.jpg" alt="Beyond the Realms of Death Book Cover" class="book-cover-img">
                 </div>
                 <div class="hero-content">
-                    <h3> style="text-align: center; font-size:2.2rem; margin-bottom: 10px; line-height: 1.2;">Beyond the Realms of Death</h3>
-                    <p class="subtitle" style="text-align: center;">A Psychological Horror & Supernatural Thriller</p>
-                    <p>
-                        <!-- Centered and Stacked Opening Poem Column -->
-                        <div style=text-align: center; font-style:italic; color; var(--accent-gold); margin: 25px auto; font-size: 1.15rem; line-height: 1.6; max-width: 400px;">
+                    <!-- Title, Subtitle, and Opening Poem perfectly stacked & centered -->
+                    <h3 style="text-align: center; font-size: 2.2rem; margin-bottom: 10px; line-height: 1.2;">Beyond the Realms of Death</h3>
+                    <p class="subtitle" style="text-align: center; color: var(--accent-gold); font-style: italic; font-size: 1.1rem; margin-bottom: 20px;">A Psychological Horror & Supernatural Thriller</p>
+                    
+                    <div style="text-align: center; font-style: italic; color: var(--accent-gold); margin: 25px auto; font-size: 1.15rem; line-height: 1.6; max-width: 400px;">
                         A rainy night I dreamed<br>
                         I’d taken my last breath,<br>
-                        and went from there it seemed,<br>
-                        Beyond the Realms of Death.<br>
-                            <hr style="border: 0; border-top: 1px solid var(--accent-gold); width:50%; margin: 15px auto 0; opacity: 0.4;">
-                        </div>
+                        And went from there it seemed<br>
+                        Beyond the realms of death.
+                        <hr style="border: 0; border-top: 1px solid var(--accent-gold); width: 50%; margin: 15px auto 0 auto; opacity: 0.4;">
+                    </div>
 
-Chris's reality fractures when he loses his beloved Sarah. Terrifying visions invade his waking mind as he develops volatile, unexplainable extrasensory abilities. While local police hunt for logical answers, a cold, dark dimension rips straight through the fabric of reality, unleashing restless spectral entities and a trail of brutal occurrences.
-
-When homicide detectives uncover a disturbing video of a botched seance, the traditional investigation collapses, forcing the lead detective to employ professional paranormal investigators. Joining forces with Chris and his friend Becky, these experts realize a malevolent force beyond the veil targets Chris. To uncover the grim truth behind Sarah’s disappearance, they must survive a chilling descent, destroy literal demons, and battle an evil entity in a desperate exorcism before the darkness claims Chris's soul.
+                    <p>
+                        Chris's reality fractures when he loses his beloved Sarah. Terrifying visions invade his waking mind as he develops volatile, unexplainable extrasensory abilities. While local police hunt for logical answers, a cold, dark dimension rips straight through the fabric of reality, unleashing restless spectral entities and a trail of brutal occurrences.
                     </p>
-                    <p style="color: var(--accent-gold); font-weight: bold; letter-spacing: 1px;">AVAILABLE NOW</p>
+                    <p>
+                        When the cops uncover a disturbing video of a botched seance, the traditional investigation collapses, forcing the lead detective to employ real paranormal investigators. Joining forces with Chris and his friend Becky, these experts realize a malevolent force beyond the veil targets them all. To uncover the grim truth behind Sarah’s disappearance, they must survive a chilling descent, destroy literal demons, and battle an ancient darkness in a desperate exorcism before the darkness claims their souls.
+                    </p>
+                    <p style="color: var(--accent-gold); font-weight: bold; letter-spacing: 1px; margin-top: 15px; text-align: center;">AVAILABLE NOW</p>
                 </div>
             </div>
+        </section>
 
-        <!-- Poetry & Writing Showcase -->
-       <section id="poetry" class="tab-content" style="display: none;">
+        <!-- 2. Poetry Section Layout (Completely Repaired) -->
+        <section id="poetry-gallery" class="section-block">
             <h2>Poetry & Selected Writings</h2>
             <div class="poetry-grid">
                 
-                <!-- Poem 1 Card -->
+                <!-- Poem 1 Card: Whispers -->
                 <div class="poetry-card">
                     <h4>Whispers</h4>
-                    <p class="poetry-excerpt">
-The wind off of the stormy seas<br>
-Whispers pain through the trees<br>
-The rain before it hits the ground<br>
-Whispers pain without a sound<br>
-The mourning song of the birds<br>
-Whispers pain without words<br>
-Flitting wings, the butterfly<br>
-Whispers pain to the sky<br>
-A rolling wave onto the land<br> 
-Whispers pain into the sand.<br>
+                    <p class="poetry-excerpt">The wind off of the stormy seas
+                    Whispers pain through the trees
+                    The rain before it hits the ground
+                    Whispers pain without a sound
+                    The mourning song of the birds
+                    Whispers pain without words
+                    Flitting wings, the butterfly
+                    Whispers pain to the sky
+                    A rolling wave onto the land
+                    Whispers pain into the sand
 
-The wind off of the peaceful seas<br>
-Whispers love through the breeze<br>
-The rain before it hits the ground<br>
-Whispers love without a sound<br>
-A morning song without words<br>
-Whispers love from the birds<br>
-As beautiful as the butterfly<br>
-Whispers love to the sky<br>
-The endless wave onto the sands<br>
-Whispers love into my hands.<br>
-
-                    </p>
+                    The wind off of the peaceful seas
+                    Whispers love through the breeze
+                    The rain before it hits the ground
+                    Whispers love without a sound
+                    A morning song without words
+                    Whispers love from the birds
+                    As beautiful as the butterfly
+                    Whispers love to the sky
+                    The endless wave onto the sands
+                    Whispers love into my hands</p>
                 </div>
-            </div>
-       </section>
 
-    <!-- Poetry Showcase Grid -->
-    <section id="poetry-gallery" class="section-block">
-        <h2>Poetry & Selected Writings</h2>
-        <div class="poetry-grid">
-                <!-- Poem 2 Card -->
+                <!-- Poem 2 Card: The Quiet Void -->
                 <div class="poetry-card">
                     <h4>The Quiet Void</h4>
-                    <p class="poetry-excerpt" style="white-space: pre-line;>
-Voices echoing in the deep darkness,<br>
-Shadows stretching across empty spaces.<br>
-Memories fading like thunder in the distance,<br>
-Erasing paths to forgotten places.<br>
+                    <p class="poetry-excerpt">Voices echoing in the deep darkness,
+Shadows stretching across empty spaces.
+                    Memories fading like thunder in the distance,
+                    Erasing paths to forgotten places.
 
-A chilling wind breathes through the quiet hallway,<br>
-Where dust settles on the frames of what used to be.<br>
-The clock stands frozen at the edge of yesterday,<br>
-Ticking away the visions I can no longer see.<br>
+                    A chilling wind breathes through the quiet hallway,
+                    Where dust settles on the frames of what used to be.
+                    The clock stands frozen at the edge of yesterday,
+                    Ticking away the visions I can no longer see.
 
-I reach into the fog for a familiar hand,<br>
-But touch only the cold, unyeilding night.<br>
-The heavy silence swallows all of my questions,<br>
-As old illusions slowly drift from sight.<br>
+                    I reach into the fog for a familiar hand,
+                    But touch only the cold, unyielding night.
+                    The heavy silence swallows all of my questions,
+                    As old illusions slowly drift from sight.
 
-Yet in the quiet void, a spark remains unseen,<br>
-Buried beneath the weight of a heart of stone.<br>
-A lingering echo of the life I left behind,<br>
-Waiting in the dark for a light to guide me home.<br>
-                    </p>
+                    Yet in the quiet void, a spark remains unseen,
+                    Buried beneath the weight of a heart of stone.
+                    A lingering echo of the life I left behind,
+                    Waiting in the dark for a light to guide me home.</p>
                 </div>
 
-                        <!-- Poem 3 Card: The Quest -->
-                        <div clas="poetry-card">
-                        <h4> The Quest</h4>
-                        <p class="poetry-excerpt" style="white-space: pre-line;">
-Alone I walk upon this beach<br>
-The other side, I hope to reach<br>
-Before the dawn I sailed away<br>
-With hopes of finding love someday<br>
-Clouds of doubt rain overhead,<br>
-Tears of pain reign in my head<br>
-Through the storms I hold the oars<br>
-By breaking waves and rocky shores<br>
-Like eyes that shine into the night<br>
-A lighthouse spins its warning light<br>
-"Stay away! Your boat, your heart<br>
-No love here, don't even start."<br>
-though I sail this lonely ocean<br>
-Full of fear and raw emotion<br>
-In my craft named 'wishful thinking.<br> 
-Like the sun, I think I'm sinking.<br>
-Will I find those loving hands<br>
-That live upon those golden sands?<br>
-Or could this be a quest forlorn<br>
-In search of one who wasn't born?"<br>
-                        </p>
+                <!-- Poem 3 Card: The Quest -->
+                <div class="poetry-card">
+                    <h4>The Quest</h4>
+                    <p class="poetry-excerpt">[ Paste the lines of your poem "The Quest" right here ]</p>
                 </div>
+
+            </div>
         </section>
 
-        <!-- About Author Section -->
-       <section id="about" class="tab-content" style="display: block;">
-            <h2>The Author Behind the Words</h2>
+        <!-- 3. About Author Section Layout -->
+        <section id="about-author" class="section-block">
+            <h2>About the Author</h2>
             <div class="about-layout">
-            <img src="profile.jpg" alt="Charles Sherrod" class="profile-pic" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent-gold); margin-bottom: 20px;">
-                <p>
-                    Charles Sherrod is an independent author specializing in dark fiction, tense psychological horror, supernatural thrillers, and evocative poetry. 
-                </p>
-                <p>
-                    With a deep appreciation for rich atmosphere, compelling mysteries, and exploring the unknown, his work probes the thin lines separating reality, dreams, and the supernatural.
-                </p>
+                <div class="about-text">
+                    <h3>The Author Behind the Words</h3>
+                    <p>
+                        Charles Sherrod is an independent author specializing in dark fiction, tense psychological horror, supernatural thrillers, and evocative poetry. His work meticulously explores the thin, frayed lines separating reality, fragile memories, and the supernatural.
+                    </p>
+                    <p>
+                        As a United States military veteran and experienced carpenter, he pairs a meticulous eye for structural detail with his current academic training in computer science management, blending practical artistry with tech-focused execution.
+                    </p>
+                </div>
             </div>
         </section>
 
@@ -367,32 +323,6 @@ In search of one who wasn't born?"<br>
     <footer>
         <p>&copy; 2026 Charles Sherrod. All Rights Reserved. Built with GitHub Pages.</p>
     </footer>
-                <!-- Tab Switching Logic Script -->
-<script>
-function switchTab(tabId) {
-    // Hide all sections completely
-    var sections = document.querySelectorAll('.tab-content');
-    sections.forEach(function(section) {
-        section.style.display = 'none';
-    });
-    
-    // Show only the selected section
-    document.getElementById(tabId).style.display = 'block';
-    
-    // Reset all navigation button colors
-    var buttons = document.querySelectorAll('.tab-btn');
-    buttons.forEach(function(btn) {
-        btn.style.color = 'var(--text-muted)';
-        btn.style.borderBottom = '2px solid transparent';
-    });
-    
-    // Highlight the active clicked button in gold
-    var activeBtn = window.event.target;
-    activeBtn.style.color = 'var(--accent-gold)';
-    activeBtn.style.borderBottom = '2px solid var(--accent-gold)';
-}
-</script>
 
 </body>
 </html>
- 
