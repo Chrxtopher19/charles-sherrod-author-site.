@@ -340,7 +340,7 @@ In search of one who wasn't born?"
         </section>
 
         <!-- 3. About Author Section Layout -->
-        <section id="about-author" class="section-block">
+        <section id="about-author" class="tab-section">
             <h2>About the Author</h2>
             <div class="about-layout">
                 <div class="about-text">
@@ -361,6 +361,23 @@ In search of one who wasn't born?"
     <footer>
         <p>&copy; 2026 Charles Sherrod. All Rights Reserved. Built with GitHub Pages.</p>
     </footer>
+    <script>
+        function switchTab(sectionId) {
+            // Hide all tab sections
+            const sections - document.querySelectorAll('.tab-section');
+            sections.forEach(sec => sec.classList.remove('active-content'));
+
+            // Remove gold active formatting from all navigation buttons
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => btn.classList.remove(active-tab'));
+
+            // Unhide the specific section clicked
+            document.getElementById(sectionId).classList.add('active-content');
+
+            Find the button that was clicked and apply gold highlight formatting
+            event.currentTarget.classList.add('active-tab');
+        }
+    </script>
 
 </body>
 </html>
