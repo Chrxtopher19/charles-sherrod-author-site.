@@ -216,9 +216,9 @@
     <nav>
         <div class="logo">Charles Sherrod</div>
         <div class="nav-links">
-            <button class="tab-btn active-tab" onclick="switchTab('book-spotlight')">Books</button>
-            <button class="tab-btn active-tab" onclick="switchTab('poetry-gallery')">Poetry</button>
-            <button class="tab-btn active-tab" onclick="switchTab('about-author')">About</button>
+            <button class="tab-btn active-tab" onclick="switchTab('book-spotlight', this)">Books</button>
+            <button class="tab-btn active-tab" onclick="switchTab('poetry-gallery', this)">Poetry</button>
+            <button class="tab-btn active-tab" onclick="switchTab('about-author', this)">About</button>
         </div>
     </nav>
 
@@ -362,20 +362,21 @@ In search of one who wasn't born?"
         <p>&copy; 2026 Charles Sherrod. All Rights Reserved. Built with GitHub Pages.</p>
     </footer>
     <script>
-        function switchTab(sectionId) {
-            // Hide all tab sections
-            const sections - document.querySelectorAll('.tab-section');
+      function switchTab(sectionId, clickElement) {
+            // 1. Hide all tab sections completely
+            const sections = document.querySelectorAll('.tab-section');
             sections.forEach(sec => sec.classList.remove('active-content'));
 
-            // Remove gold active formatting from all navigation buttons
+            // 2. Remove gold active formatting lines from all navigation buttons
             const buttons = document.querySelectorAll('.tab-btn');
-            buttons.forEach(btn => btn.classList.remove(active-tab'));
+            buttons.forEach(btn => btn.classList.remove('active-tab'));
 
-            // Unhide the specific section clicked
+            // 3. Unhide the specific section card element clicked
             document.getElementById(sectionId).classList.add('active-content');
 
-            Find the button that was clicked and apply gold highlight formatting
-            event.currentTarget.classList.add('active-tab');
+            // 4. Safely apply the gold highlight line to the clicked button
+            if (clickElement) {
+                clickElement.classList.add('active-tab');
         }
     </script>
 
